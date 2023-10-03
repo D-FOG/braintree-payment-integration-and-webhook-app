@@ -1,7 +1,8 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
 import cardImage from '../public/creditCard.jpg'
-import {useRouter} from 'next/router'
+import {useRouter} from 'next/navigation'
 
 export default function home() {
   const router = useRouter();
