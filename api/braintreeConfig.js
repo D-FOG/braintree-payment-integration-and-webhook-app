@@ -1,12 +1,12 @@
 // Import the Braintree library
-const braintree = require('braintree');
+import braintree from 'braintree'
 
 // Configure your Braintree credentials
 const gateway = new braintree.BraintreeGateway({
   environment: braintree.Environment.Sandbox, // Use 'Sandbox' for testing, change to 'Production' for live transactions
-  merchantId: '2dp4ts5hx6gfqdrp',
-  publicKey: 'v4mwgdm9ptg83vt8',
-  privateKey: '001411b75295098b48825aa7ccd19599',
+  merchantId: process.env.MerchantId,
+  publicKey: process.env.PublicKey,
+  privateKey: process.env.PrivateKey,
 });
 
-module.exports = gateway;
+export default gateway;

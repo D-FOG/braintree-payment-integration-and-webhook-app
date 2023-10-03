@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import cardImage from '../public/creditCard.jpg'
+import {useRouter} from 'next/router'
 
 export default function home() {
+  const router = useRouter();
+  const handlePaymentRoute = () => {
+    router.push('./paymentPage.js');
+  }
   return (
     <>
       <div className={styles.body}>
@@ -38,7 +43,7 @@ export default function home() {
             <p>
               Discover a New Era of Payments with Pay-Go! Experience effortless transactions through our intuitive interface, backed by state-of-the-art security protocols that keep your financial information safe. Enjoy instant processing, tailored solutions for your business, and the ability to connect with customers worldwide. Our round-the-clock support is here for you. Embrace the future of seamless and secure payments – join Pay-Go today!
             </p>
-            <button>Click to Pay</button>
+            <button onClick={handlePaymentRoute}>Click to Pay</button>
           </div>
           <div className={styles.contentTwo}>
             <Image src={cardImage} alt="payment image" loading="lazy" placeholder="blur"/>
