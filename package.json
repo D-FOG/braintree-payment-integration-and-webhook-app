@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "braintree": "^3.17.0",
+    "braintree-web": "^3.97.1",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
